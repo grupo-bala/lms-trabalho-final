@@ -1,0 +1,79 @@
+@import url(../global.css);
+
+.container {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.container__top {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.container__top>span {
+    font-size: 2em;
+}
+
+.container__subtitle {
+    font-weight: normal;
+    color: var(--text-secondary);
+}
+
+.network {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid var(--text-light);
+    border-radius: 5px;
+    background-color: var(--background-light);
+    padding: 1.5rem;
+    gap: 1rem;
+}
+
+.network__info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: start;
+    gap: 1rem;
+}
+
+.network__info__title_content {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.network__info__rate {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--text-primary);
+    font-size: 1.2em;
+}
+
+.network__info__connect_btn {
+    padding: 0.8rem 1.5em;
+    background-color: var(--text-primary);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid var(--text-primary);
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.network__info__connect_btn:hover {
+    background-color: white;
+    color: var(--text-primary);
+}
+
+.network__map {
+    flex-grow: 2;
+    border: 1px solid var(--text-primary);
+    border-radius: 5px;
+    min-width: 250px;
+    min-height: 300px;
+}

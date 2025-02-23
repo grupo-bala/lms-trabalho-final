@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="perfil-style.css">
+        <script src="https://kit.fontawesome.com/980c70e4c3.js" crossorigin="anonymous"></script>
+        <title>Perfil</title>
+    </head>
+<body>
+    <div class="container">
+        <div class="container__top">
+            <span class="fa-solid fa-arrow-left"></span>
+            <div class="container__top_content">
+                <h1 class="container__title">Perfil</h1>
+                <h6 class="container__subtitle">Informações do Usuário</h6>
+            </div>
+        </div>  
+        
+    </div>
+    <div class="profile">
+        <div class="inputs">
+            <input type="file" id="fileInput" class="hidden" accept="image/*">
+            <img src="../assets/bala.jpeg" alt="Foto do usuário" class="profile-picture" id="profilePic">
+            <input type="text" class="input-field" value="Grupo Bala">
+            <input type="password" class="input-field" placeholder="Nova senha">
+        </div>
+        <div class="profile-content">
+            <h3>Histórico de Redes</h3>
+            <ul class="network-history">
+                <li>3U_4M0_QU1X4D4</li>
+                <li>3U_4M0_QU1X4D4</li>
+                <li>MAC LANCHES CLIENTES</li>
+            </ul>
+            <h3>Configurações de Privacidade</h3>
+            <label>
+                <input type="checkbox" checked> Tornar perfil privado
+            </label>
+            <button class="save-button">Salvar</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById("profilePic").addEventListener("click", function() {
+            document.getElementById("fileInput").click();
+        });
+
+        document.getElementById("fileInput").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById("profilePic").src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

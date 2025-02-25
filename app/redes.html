@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="redes-style.css">
     <script src="https://kit.fontawesome.com/980c70e4c3.js" crossorigin="anonymous"></script>
-    <title>Qui Internet? - Redes disponíveis</title>
+    <link rel="icon" type="image/png" href="../assets/bala.jpeg">
+    <title>Redes disponíveis</title>
 </head>
 
 <body>
     <div class="container">
         <div class="container__top">
-            <span class="fa-solid fa-arrow-left"></span>
+            <span class="fa-solid fa-arrow-left" onclick="goBack()"></span>
             <div class="container__top_content">
                 <h1 class="container__title">Redes disponíveis</h1>
                 <h6 class="container__subtitle">Clique em uma das opções abaixo para ler mais sobre.</h6>
             </div>
-            <button class="networks__add_btn">
+            <button class="networks__add_btn" onclick="addNetwork()">
                 <span class="fa-solid fa-plus"></span>
                 Adicionar rede
             </button>
@@ -146,6 +147,14 @@
     <script>
         function networkDetails() {
             window.location.href = "detalhes-rede.html";
+        }
+
+        function addNetwork() {
+            window.location.href = "adicionar-rede.html";
+        }
+
+        function goBack() {
+            window.history.back();
         }
     </script>
 </body>

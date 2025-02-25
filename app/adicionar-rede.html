@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="adicionar-rede-style.css">
+    <script src="https://kit.fontawesome.com/980c70e4c3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="../assets/bala.jpeg">
+    <title>Adicionar rede</title>
+</head>
+
+<body>
+    <section class="add-network">
+        <div class="add-network__title-container">
+            <span class="fa-solid fa-arrow-left" onclick="goBack()"></span>
+            <h1 class="add-network__title-container__title">Adicionar nova rede</h1>
+        </div>
+
+        <form class="add-network__form" action="#" method="POST">
+            <label for="network-name">Nome da Rede:</label>
+            <input type="text" id="network-name" name="network-name" required>
+
+            <label for="location">Localização:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="security-type">Tipo de Segurança:</label>
+            <select id="security-type" name="security-type" required>
+                <option value="WEP">WEP</option>
+                <option value="WPA">WPA</option>
+                <option value="WPA2">WPA2</option>
+                <option value="WPA3">WPA3</option>
+                <option value="aberta">Aberta</option>
+            </select>
+
+            <label for="frequency">Frequência:</label>
+            <select id="frequency" name="frequency" required>
+                <option value="2.4GHz">2.4GHz</option>
+                <option value="5GHz">5GHz</option>
+            </select>
+
+            <label for="password">Senha (opcional):</label>
+            <input type="password" id="password" name="password">
+
+            <button type="submit">Adicionar</button>
+        </form>
+    </section>
+
+    <script>
+        const form = document.querySelector("form.add-network__form");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            window.location.href = "redes.html";
+        });
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>

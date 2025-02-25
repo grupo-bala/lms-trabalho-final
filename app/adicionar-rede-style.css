@@ -1,0 +1,62 @@
+@import url(../global.css);
+
+.add-network {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    font-weight: normal;
+}
+
+.add-network__title-container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.add-network__title-container>span {
+    font-size: 2em;
+}
+
+.add-network__title-container__title {
+    font-size: 2em;
+}
+
+.add-network__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.add-network__form>label {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.add-network__form>input,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+}
+
+.add-network__form>button[type="submit"] {
+    width: fit-content;
+    padding: .8rem 1.5em;
+    background-color: var(--text-primary);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid var(--text-primary);
+    cursor: pointer;
+    transition: all .2s;
+    align-self: flex-end;
+}
+
+.add-network__form>button[type="submit"]:hover {
+    background-color: white;
+    color: var(--text-primary);
+}

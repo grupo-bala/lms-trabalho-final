@@ -11,37 +11,48 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <div class="logo">Qui Internet?</div>
+            <ul>
+                <li><a href="redes.html">Redes</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
         <div class="container__top">
-            <span class="fa-solid fa-arrow-left"></span>
             <div class="container__top_content">
                 <h1 class="container__title">Perfil</h1>
                 <h6 class="container__subtitle">Informações do Usuário</h6>
             </div>
         </div>
+        <div class="profile">
+            <div class="inputs">
+                <input type="file" id="fileInput" class="hidden" accept="image/*">
+                <img src="../assets/bala.jpeg" alt="Foto do usuário" class="profile-picture" id="profilePic">
+                <input type="text" class="input-field" value="Grupo Bala">
+                <input type="password" class="input-field" placeholder="Nova senha">
+            </div>
+            <div class="profile-content">
+                <h3>Histórico de Redes</h3>
+                <ul class="network-history">
+                    <li>3U_4M0_QU1X4D4</li>
+                    <li>3U_4M0_QU1X4D4</li>
+                    <li>MAC LANCHES CLIENTES</li>
+                </ul>
+                <h3>Configurações de Privacidade</h3>
+                <label>
+                    <input type="checkbox" checked> Tornar perfil privado
+                </label>
+                <button class="save-button">Salvar</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Qui Internet?. Todos os direitos reservados.</p>
+    </footer>
 
-    </div>
-    <div class="profile">
-        <div class="inputs">
-            <input type="file" id="fileInput" class="hidden" accept="image/*">
-            <img src="../assets/bala.jpeg" alt="Foto do usuário" class="profile-picture" id="profilePic">
-            <input type="text" class="input-field" value="Grupo Bala">
-            <input type="password" class="input-field" placeholder="Nova senha">
-        </div>
-        <div class="profile-content">
-            <h3>Histórico de Redes</h3>
-            <ul class="network-history">
-                <li>3U_4M0_QU1X4D4</li>
-                <li>3U_4M0_QU1X4D4</li>
-                <li>MAC LANCHES CLIENTES</li>
-            </ul>
-            <h3>Configurações de Privacidade</h3>
-            <label>
-                <input type="checkbox" checked> Tornar perfil privado
-            </label>
-            <button class="save-button">Salvar</button>
-        </div>
-    </div>
     <script>
         document.getElementById("profilePic").addEventListener("click", function () {
             document.getElementById("fileInput").click();

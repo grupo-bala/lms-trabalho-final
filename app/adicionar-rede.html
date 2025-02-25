@@ -11,9 +11,17 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <div class="logo">Qui Internet?</div>
+            <ul>
+                <li><a href="redes.html">Redes</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
     <section class="add-network">
         <div class="add-network__title-container">
-            <span class="fa-solid fa-arrow-left" onclick="goBack()"></span>
             <h1 class="add-network__title-container__title">Adicionar nova rede</h1>
         </div>
 
@@ -45,6 +53,9 @@
             <button type="submit">Adicionar</button>
         </form>
     </section>
+    <footer>
+        <p>&copy; 2025 Qui Internet?. Todos os direitos reservados.</p>
+    </footer>
 
     <script>
         const form = document.querySelector("form.add-network__form");

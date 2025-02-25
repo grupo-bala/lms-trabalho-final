@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.5em;
+    height: 100%;
 }
 
 .container__top {
@@ -43,7 +44,6 @@
 
 .networks__item {
     width: 100%;
-    max-width: 500px;
     border: 1px solid var(--text-light);
     border-radius: 5px;
     padding: .8em;
@@ -56,7 +56,7 @@
 }
 
 .networks__item:hover {
-    transform: scale(105%);
+    transform: scale(102%);
 }
 
 .networks__item_title_content {
@@ -85,7 +85,8 @@
 
 @media screen and (min-width: 640px) {
     .networks__list {
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .networks__add_btn {
